@@ -27,14 +27,14 @@ int main()
     long long sum = 0;
     fin >> n >> k;
     vector<int> profit;
-    profit.assign(n, 0);
+    profit.assign(n+1, 0);
     for (i = 0; i < n; ++ i)
     {
         fin >> profit[i];
         sum += profit[i];
     }
     if (k >= n) {
-        cout << 0 << endl;
+        cout << sum << endl;
         return 0;
     }
     profit[n] = 0;
